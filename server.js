@@ -75,7 +75,7 @@ app.post("/api/reset", (req, res) => {
   });
 });
 
-app.get("*", (_req, res) => {
+app.get("/{*splat}", (_req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 

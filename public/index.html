@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Tape Guy - Conversational Search</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <h1>Movie Tape Guy</h1>
+        <p>
+          Your witty neighborhood videotape expert. Short questions. Sharp recommendations.
+          Multilingual taste, always in stock.
+        </p>
+      </header>
+
+      <section class="status-bar">
+        <div>
+          <span class="label">Understanding meter:</span>
+          <span id="persona-depth">0%</span>
+        </div>
+        <button id="reset-profile" type="button">Reset my profile</button>
+      </section>
+
+      <section id="chat-log" class="chat-log" aria-live="polite"></section>
+
+      <section class="quick-replies">
+        <span class="label">Quick clues:</span>
+        <button type="button" class="chip">dark thriller tonight</button>
+        <button type="button" class="chip">something cozy and romantic</button>
+        <button type="button" class="chip">Korean cinema please</button>
+        <button type="button" class="chip">90s classics</button>
+      </section>
+
+      <form id="chat-form" class="chat-form">
+        <label for="message-input" class="visually-hidden">Message</label>
+        <input
+          id="message-input"
+          name="message"
+          type="text"
+          autocomplete="off"
+          placeholder="Tell me your mood, genre, language, or a movie you liked..."
+          required
+        />
+        <button type="submit">Ask Tape Guy</button>
+      </form>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
